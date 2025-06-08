@@ -1,0 +1,60 @@
+<!-- Estructura básica de una web de intercambio de skins de CS2 sin bots -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinTrade</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="bg-gray-800 p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">SkinTrade</h1>
+    <a href="/auth/steam" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">Iniciar sesión con Steam</a>
+  </header>
+
+  <main class="p-6">
+    <!-- Perfil del usuario -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Tu Perfil</h2>
+      <div class="bg-gray-800 p-4 rounded">
+        <p><strong>Nombre:</strong> Usuario</p>
+        <p><strong>Trade Link:</strong> <a href="#" class="text-blue-400 underline">Editar</a></p>
+      </div>
+    </section>
+
+    <!-- Crear nueva oferta -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Crear nueva oferta</h2>
+      <div class="bg-gray-800 p-4 rounded">
+        <label class="block mb-2">Skins que ofreces:</label>
+        <input type="text" placeholder="Ej: AWP | Asiimov" class="w-full p-2 rounded mb-4 text-black" />
+
+        <label class="block mb-2">Buscas:</label>
+        <input type="text" placeholder="Ej: M4A1-S | Hyper Beast" class="w-full p-2 rounded mb-4 text-black" />
+
+        <button class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded">Publicar Oferta</button>
+      </div>
+    </section>
+
+    <!-- Listado de ofertas -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Ofertas recientes</h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Ejemplo de una tarjeta de oferta -->
+        <div class="bg-gray-800 p-4 rounded shadow">
+          <p><strong>Usuario:</strong> SteamUser123</p>
+          <p><strong>Ofrece:</strong> AK-47 | Redline</p>
+          <p><strong>Busca:</strong> AWP | Safari Mesh</p>
+          <a href="#" class="mt-2 inline-block text-blue-400 underline">Enviar oferta en Steam</a>
+        </div>
+        <!-- Más tarjetas se generan dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-center p-4 mt-8">
+    <p>&copy; 2025 SkinTrade. No afiliado con Valve o Steam.</p>
+  </footer>
+</body>
+</html>
