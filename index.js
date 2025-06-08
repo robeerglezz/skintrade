@@ -12,7 +12,7 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(new SteamStrategy({
   returnURL: 'https://zoneclicker.com/auth/steam/return',
   realm: 'https://robeerglezz.github.io/skintrade/',
-  apiKey: 'E7EF9AE255E479F5CABAB1E9FBDF82AF'
+  apiKey: 'D446931D47A428F250DD44B0B0E96937'
 }, (identifier, profile, done) => {
   profile.identifier = identifier;
   return done(null, profile);
